@@ -8,6 +8,8 @@ jobs:
   vpn-test:
     runs-on: ubuntu-latest
     steps:
+      - run: pwd && ls
+
       - name: setup vpn config
         run: echo "${{ secrets.OVPN_FILE }}" > config.ovpn
 
